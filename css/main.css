@@ -1,0 +1,201 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Merriweather', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-weight: 400;
+  color: #343030;
+  background-color: #f6f3f3; }
+
+.container {
+  max-width: 1216px;
+  margin: 0 auto; }
+
+.heading {
+  font-family: 'Merriweather', sans-serif; }
+  .heading--1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-top: 45px;
+    margin-bottom: 39px; }
+  .heading--2 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px; }
+  .heading--3 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 12px; }
+
+.btn, .btn:link, .btn:visited {
+  font-family: 'Merriweather', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 118px;
+  height: 48px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #403432;
+  color: #f4f6f9;
+  line-height: 21px;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  background-color: #776763; }
+
+.btn:active, .btn:focus {
+  outline: none; }
+
+.btn--search {
+  width: 122px;
+  padding: 14px 36px 13px; }
+
+.btn--shop {
+  padding: 14px 30px 13px 31px; }
+
+.btn--disabled {
+  background-color: #c1b4b1; }
+
+.btn--cart {
+  background-color: #5b3a32;
+  padding: 14px 9px 13px 8px; }
+
+.search {
+  position: relative; }
+  .search__input {
+    font-family: 'Merriweather', sans-serif;
+    width: 416px;
+    height: 48px;
+    padding: 13px 16px;
+    color: #9f9f9f;
+    font-size: 14px;
+    border: 1px solid #e1e1e1;
+    box-sizing: border-box;
+    background-color: transparent; }
+    .search__input:active, .search__input:focus {
+      border-color: #b5b5b5;
+      outline: none;
+      color: #343030; }
+  .search__btn {
+    position: absolute;
+    height: 48px;
+    top: 0;
+    right: 0; }
+
+.contacts {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 14px;
+  line-height: 21px; }
+  .contacts__tel, .contacts__address {
+    text-decoration: none;
+    color: #555; }
+    .contacts__tel:hover, .contacts__address:hover {
+      color: #776763; }
+    .contacts__tel:active, .contacts__address:active {
+      color: #5b3a32; }
+  .contacts__tel {
+    position: relative;
+    padding-left: 23px;
+    margin-right: 50px; }
+    .contacts__tel::before {
+      content: url(../../img/phone.svg);
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      top: 3px;
+      left: 0; }
+  .contacts__address {
+    position: relative;
+    padding-left: 21px; }
+    .contacts__address::before {
+      content: url(../../img/address.svg);
+      display: inline-block;
+      width: 10px;
+      height: 14px;
+      position: absolute;
+      top: 3px;
+      left: 0; }
+
+.section {
+  padding: 24px 0; }
+  .section__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .section--header {
+    border-bottom: 1px solid #e1e1e1; }
+  .section--main {
+    flex-grow: 1; }
+  .section--footer {
+    flex-shrink: 0;
+    background-color: #eceaea;
+    color: #555; }
+
+.nav {
+  display: flex; }
+  .nav__logo {
+    width: 48px;
+    height: 48px;
+    margin-right: 48px; }
+  .nav__links {
+    display: flex;
+    align-items: center;
+    list-style: none; }
+  .nav__item {
+    margin-right: 48px; }
+    .nav__item:last-child {
+      margin-right: 0; }
+  .nav__link {
+    text-decoration: none;
+    font-size: 14px;
+    color: #343030; }
+    .nav__link:hover {
+      color: #776763; }
+    .nav__link:active {
+      color: #5b3a32; }
+
+.shop {
+  display: flex;
+  justify-content: space-between;
+  flex: 1; }
+  .shop__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 280px;
+    border: 1px solid #e1e1e1; }
+    .shop__item--sold {
+      opacity: 50%; }
+  .shop__info {
+    padding: 20px 24px 24px; }
+  .shop__buy {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px; }
+  .shop__price-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .shop__price--old {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    color: #a0a0a0;
+    text-decoration: line-through; }
+  .shop__price--new {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px; }
