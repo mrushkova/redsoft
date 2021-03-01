@@ -110,7 +110,7 @@ body {
     padding-left: 1.4375rem;
     margin-right: 3.125rem; }
     .contacts__tel::before {
-      content: url(../../img/phone.svg);
+      content: url(../img/phone.svg);
       display: inline-block;
       width: 0.875rem;
       height: 0.875rem;
@@ -121,7 +121,7 @@ body {
     position: relative;
     padding-left: 1.3125rem; }
     .contacts__address::before {
-      content: url(../../img/address.svg);
+      content: url(../img/address.svg);
       display: inline-block;
       width: 0.625rem;
       height: 0.875rem;

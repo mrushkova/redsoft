@@ -15,7 +15,7 @@
     margin-right: rem(50px);
 
     &::before {
-      content: url(../../img/phone.svg);
+      content: url(../img/phone.svg);
       display: inline-block;
       width: rem(14px);
       height: rem(14px);
@@ -30,7 +30,7 @@
     padding-left: rem(21px);
 
     &::before {
-      content: url(../../img/address.svg);
+      content: url(../img/address.svg);
       display: inline-block;
       width: rem(10px);
       height: rem(14px);
