@@ -1,0 +1,9 @@
+.DS_Store
+.vscode
+package-lock.json
+*.log
+node_modules/
+npm-debug.*
+css/*.css
+css/*.map
+Thumbs.db

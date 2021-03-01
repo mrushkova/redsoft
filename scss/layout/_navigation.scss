@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+
+  &__logo {
+    width: 48px;
+    height: 48px;
+    margin-right: 48px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 48px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    @include link;
+    font-size: $default-font-size;
+    color: $color-text;
+  }
+}

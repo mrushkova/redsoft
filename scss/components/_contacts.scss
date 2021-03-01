@@ -1,0 +1,42 @@
+.contacts {
+  @include font;
+  font-size: $default-font-size;
+  line-height: 21px;
+
+  &__tel,
+  &__address {
+    @include link;
+    color: $color-grey-dark;
+  }
+
+  &__tel {
+    position: relative;
+    padding-left: 23px;
+    margin-right: 50px;
+
+    &::before {
+      content: url(../../img/phone.svg);
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      top: 3px;
+      left: 0;
+    }
+  }
+
+  &__address {
+    position: relative;
+    padding-left: 21px;
+
+    &::before {
+      content: url(../../img/address.svg);
+      display: inline-block;
+      width: 10px;
+      height: 14px;
+      position: absolute;
+      top: 3px;
+      left: 0;
+    }
+  }
+}

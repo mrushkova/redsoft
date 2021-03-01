@@ -1,0 +1,15 @@
+@mixin font {
+  font-family: 'Merriweather', sans-serif;
+}
+
+@mixin link {
+  text-decoration: none;
+
+  &:hover {
+    color: $color-hover;
+  }
+
+  &:active {
+    color: $color-cart;
+  }
+}

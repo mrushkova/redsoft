@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <script defer="" src="./js/main.js"></script>
+
+    <title>Redsoft test assignment</title>
+  </head>
+  <body>
+    <header class="section section--header">
+      <div class="container">
+        <div class="section__inner">
+          <nav class="nav">
+            <div class="nav__logo logo">
+              <img src="img/logo.png" alt="Логотип">
+            </div>
+            <ul class="nav__links">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Каталог</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Доставка</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Оплата</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Контакты</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">О галерее</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="search">
+            <input type="search" class="search__input" placeholder="Поиск по названию картины">
+            <div class="search__btn">
+              <button class="btn btn--search" type="submit">Найти</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="section--main">
+      <div class="container">
+        <h1 class="heading heading--1">Картины эпохи Возрождения</h1>
+        <div class="shop">
+          <div class="shop__item" data-id="1">
+            <img class="shop__img" src="img/botticelli@1x.jpg" srcset="img/botticelli@1x.jpg 1x, img/botticelli@2x.jpg 2x" alt="Боттичелли">
+            <div class="shop__info">
+              <h2 class="heading heading--2">
+                «Рождение Венеры» Сандро Боттичелли
+              </h2>
+              <div class="shop__buy">
+                <div class="shop__price-box">
+                  <p class="shop__price shop__price--old">2 000 000 $</p>
+                  <p class="shop__price shop__price--new">1 000 000 $</p>
+                </div>
+                <div class="shop__btn">
+                  <button class="btn btn--shop" type="button">Купить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shop__item" data-id="2">
+            <img class="shop__img" src="img/davinci@1x.jpg" srcset="img/davinci@1x.jpg 1x, img/davinci@2x.jpg 2x" alt="Леонардо да Винчи">
+            <div class="shop__info">
+              <h2 class="heading heading--2">
+                «Тайная вечеря» Леонардо да Винчи
+              </h2>
+              <div class="shop__buy">
+                <div class="shop__price-box">
+                  <p class="shop__price shop__price--new">3 000 000 $</p>
+                </div>
+                <div class="shop__btn">
+                  <button class="btn btn--shop" type="button">Купить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shop__item" data-id="3">
+            <img class="shop__img" src="img/mikelandjelo@1x.jpg" srcset="img/mikelandjelo@1x.jpg 1x, img/mikelandjelo@2x.jpg 2x" alt="Микеланджело">
+            <div class="shop__info">
+              <h2 class="heading heading--2">
+                «Сотворение Адама» Микеланджело
+              </h2>
+              <div class="shop__buy">
+                <div class="shop__price-box">
+                  <p class="shop__price shop__price--old">6 000 000 $</p>
+                  <p class="shop__price shop__price--new">5 000 000 $</p>
+                </div>
+                <div class="shop__btn">
+                  <button class="btn btn--shop" type="button">Купить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shop__item shop__item--sold" data-id="4">
+            <img class="shop__img" src="img/rembrandt@1x.jpg" srcset="img/rembrandt@1x.jpg 1x, img/rembrandt@2x.jpg 2x" alt="Рембрандт">
+            <div class="shop__info">
+              <h2 class="heading heading--2">«Урок анатомии» Рембрандт</h2>
+              <div class="shop__buy">
+                <h3 class="heading heading--3">Продана на аукционе</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="section section--footer">
+      <div class="container">
+        <div class="section__inner">
+          <nav class="nav">
+            <div class="nav__logo logo">
+              <img src="img/logo.png" alt="Логотип">
+            </div>
+            <ul class="nav__links">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Каталог</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Доставка</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Оплата</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Контакты</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">О галерее</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contacts">
+            <a href="tel:+74955555555" class="contacts__tel">+7 (495) 555-55-55</a>
+            <a href="#" class="contacts__address">г. Москва, ул. Расплетина, 24</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

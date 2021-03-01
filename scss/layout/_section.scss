@@ -1,0 +1,23 @@
+.section {
+  padding: 24px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--header {
+    border-bottom: 1px solid #e1e1e1;
+  }
+
+  &--main {
+    flex-grow: 1;
+  }
+
+  &--footer {
+    flex-shrink: 0;
+    background-color: #eceaea;
+    color: $color-grey-dark;
+  }
+}

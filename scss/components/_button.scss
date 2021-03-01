@@ -1,0 +1,48 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    @include font;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 118px;
+    height: 48px;
+    text-decoration: none;
+    font-size: $default-font-size;
+    font-weight: 700;
+    background-color: $color-btn;
+    color: $color-white;
+    line-height: 21px;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    background-color: $color-hover;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &--search {
+    width: 122px;
+    padding: 14px 36px 13px;
+  }
+
+  &--shop {
+    padding: 14px 30px 13px 31px;
+  }
+
+  &--disabled {
+    background-color: $color-disable;
+  }
+
+  &--cart {
+    background-color: $color-cart;
+    padding: 14px 9px 13px 8px;
+  }
+}

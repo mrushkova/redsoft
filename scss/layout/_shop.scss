@@ -1,0 +1,48 @@
+.shop {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 280px;
+    border: 1px solid #e1e1e1;
+
+    &--sold {
+      opacity: 50%;
+    }
+  }
+
+  &__info {
+    padding: 20px 24px 24px;
+  }
+
+  &__buy {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+  }
+
+  &__price-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__price {
+    &--old {
+      font-size: $default-font-size;
+      font-weight: 300;
+      line-height: 21px;
+      color: $color-grey;
+      text-decoration: line-through;
+    }
+
+    &--new {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+  }
+}
