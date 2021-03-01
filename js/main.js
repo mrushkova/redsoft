@@ -12,10 +12,11 @@ const markupInLoad = `
 <img src="img/loader.svg" alt="Загрузка">
 `;
 const markupInStock = `Купить`;
+const LOCAL_STORAGE_KEY = 'cart';
 let cart = [];
 
-const keepItems = function () {
-  localStorage.setItem('cart', JSON.stringify(cart));
+const syncLocalStorage = function () {
+  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(cart));
 };
 
 const timeout = function () {
@@ -40,16 +41,16 @@ const addItem = async function (id) {
     };
 
     cart.push(item);
-    keepItems();
+    syncLocalStorage();
   } catch (err) {
-    console.error(err);
+    alert(err);
   }
 };
 
 const deleteItem = function (id) {
   const index = cart.findIndex(item => item.id === id);
   cart.splice(index, 1);
-  keepItems();
+  syncLocalStorage();
 };
 
 const renderItems = function () {
@@ -64,7 +65,7 @@ const renderItems = function () {
 };
 
 btns.forEach(btn => {
-  btn.addEventListener('click', function () {
+  btn.addEventListener('click', async function () {
     // Get item id
     const id = btn.closest('.shop__item').dataset.id;
 
@@ -73,7 +74,7 @@ btns.forEach(btn => {
       btn.classList.add('btn--disabled');
       btn.innerHTML = markupInLoad;
 
-      addItem(id);
+      await addItem(id);
 
       // Confirm purchase
       btn.innerHTML = markupInCart;
@@ -89,7 +90,7 @@ btns.forEach(btn => {
 });
 
 const init = function () {
-  const storage = localStorage.getItem('cart');
+  const storage = localStorage.getItem(LOCAL_STORAGE_KEY);
   if (storage) cart = JSON.parse(storage);
   renderItems();
 };

@@ -9,13 +9,15 @@ var autoprefixer = require('autoprefixer');
 var server = require('browser-sync').create();
 var csso = require('gulp-csso');
 var rename = require('gulp-rename');
-var webp = require('gulp-webp');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
 var posthtml = require('gulp-posthtml');
 var include = require('posthtml-include');
 
 gulp.task('css', function () {
   return gulp
-    .src('sass/main.scss')
+    .src('scss/main.scss')
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
@@ -28,8 +30,8 @@ gulp.task('css', function () {
     .pipe(server.stream());
 });
 
-gulp.task('sass', function () {
-  return gulp.src('sass/main.scss').pipe(sass()).pipe(gulp.dest('css'));
+gulp.task('scss', function () {
+  return gulp.src('scss/main.scss').pipe(sass()).pipe(gulp.dest('css'));
 });
 
 gulp.task('server', function () {
@@ -41,7 +43,7 @@ gulp.task('server', function () {
     ui: false,
   });
 
-  gulp.watch('sass/**/*.{scss,sass}', gulp.series('css', 'sass'));
+  gulp.watch('scss/**/*.scss', gulp.series('css', 'scss'));
   gulp.watch('img/*.svg', gulp.series('html'));
   gulp.watch('js/*.js', gulp.series('refresh'));
   gulp.watch('*.html', gulp.series('html', 'refresh'));
@@ -52,19 +54,27 @@ gulp.task('refresh', function (done) {
   done();
 });
 
-gulp.task('webp', function () {
-  return gulp
-    .src('source/img/**/*.{png,jpg}')
-    .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest('source/img'));
-});
-
 gulp.task('html', function () {
   return gulp
     .src('*.html')
     .pipe(posthtml([include()]))
     .pipe(gulp.dest('.'));
 });
+
+gulp.task('js', () =>
+  browserify({
+    entries: 'js/main.js',
+  })
+    .transform('babelify', {
+      presets: ['@babel/preset-env'],
+    })
+    .bundle()
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(sourcemap.init({ loadMaps: true }))
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest('js'))
+);
 
 gulp.task('copy', function () {
   return gulp
@@ -74,5 +84,5 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('.'));
 });
 
-gulp.task('build', gulp.series('copy', 'css', 'html'));
+gulp.task('build', gulp.series('copy', 'css', 'html', 'js'));
 gulp.task('start', gulp.series('build', 'server'));

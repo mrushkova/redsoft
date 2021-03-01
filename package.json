@@ -13,7 +13,9 @@
   },
   "author": "Maria Rushkova",
   "devDependencies": {
+    "@babel/core": "^7.13.8",
     "autoprefixer": "9.8.x",
+    "babelify": "^10.0.0",
     "browser-sync": "2.26.x",
     "eslint": "7.3.1",
     "gulp": "4.0.x",
@@ -32,12 +34,16 @@
     "stylelint": "13.6.x"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.13.8",
+    "browserify": "^17.0.0",
     "core-js": "^3.9.0",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "live-server": "^1.2.1",
     "normalize.css": "^8.0.1",
-    "regenerator-runtime": "^0.13.7"
+    "regenerator-runtime": "^0.13.7",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "browserslist": [
     "last 2 versions",
