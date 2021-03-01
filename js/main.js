@@ -1,5 +1,8 @@
 'use strict';
 
+import 'core-js';
+import 'regenerator-runtime';
+
 const btns = document.querySelectorAll('.btn--shop');
 const markupInCart = `
     <img src="img/checked.svg" alt="Готово"> 
