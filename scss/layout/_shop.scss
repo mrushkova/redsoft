@@ -6,8 +6,8 @@
   &__item {
     display: flex;
     flex-direction: column;
-    max-width: 280px;
-    border: 1px solid #e1e1e1;
+    max-width: rem(280px);
+    border: 1px solid $color-light;
 
     &--sold {
       opacity: 50%;
@@ -15,13 +15,13 @@
   }
 
   &__info {
-    padding: 20px 24px 24px;
+    padding: rem(20px) rem(24px) rem(24px);
   }
 
   &__buy {
     display: flex;
     justify-content: space-between;
-    margin-top: 22px;
+    margin-top: rem(22px);
   }
 
   &__price-box {
@@ -34,15 +34,15 @@
     &--old {
       font-size: $default-font-size;
       font-weight: 300;
-      line-height: 21px;
+      line-height: rem(21px);
       color: $color-grey;
       text-decoration: line-through;
     }
 
     &--new {
-      font-size: 16px;
+      font-size: rem(16px);
       font-weight: 700;
-      line-height: 24px;
+      line-height: rem(24px);
     }
   }
 }

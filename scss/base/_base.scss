@@ -13,10 +13,10 @@ body {
   height: 100vh;
   font-weight: 400;
   color: $color-text;
-  background-color: #f6f3f3;
+  background-color: $color-background;
 }
 
 .container {
-  max-width: 1216px;
+  max-width: $container-size;
   margin: 0 auto;
 }

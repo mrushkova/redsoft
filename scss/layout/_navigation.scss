@@ -2,9 +2,9 @@
   display: flex;
 
   &__logo {
-    width: 48px;
-    height: 48px;
-    margin-right: 48px;
+    width: rem(48px);
+    height: rem(48px);
+    margin-right: rem(48px);
   }
 
   &__links {
@@ -14,7 +14,7 @@
   }
 
   &__item {
-    margin-right: 48px;
+    margin-right: rem(48px);
 
     &:last-child {
       margin-right: 0;

@@ -3,26 +3,26 @@
 
   &__input {
     @include font;
-    width: 416px;
-    height: 48px;
-    padding: 13px 16px;
-    color: #9f9f9f;
+    min-width: rem(416px);
+    height: rem(48px);
+    padding: rem(13px) rem(16px);
+    color: $color-grey-light;
     font-size: $default-font-size;
-    border: 1px solid #e1e1e1;
+    border: 1px solid $color-light;
     box-sizing: border-box;
     background-color: transparent;
 
     &:active,
     &:focus {
-      border-color: #b5b5b5;
-      outline: none;
+      border-color: $color-border;
+      outline: $color-border;
       color: $color-text;
     }
   }
 
   &__btn {
     position: absolute;
-    height: 48px;
+    height: rem(48px);
     top: 0;
     right: 0;
   }

@@ -6,15 +6,13 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    width: 118px;
-    height: 48px;
+    min-width: rem(118px);
     text-decoration: none;
     font-size: $default-font-size;
     font-weight: 700;
     background-color: $color-btn;
     color: $color-white;
-    line-height: 21px;
-    transition: all 0.2s;
+    line-height: rem(21px);
     border: none;
     cursor: pointer;
   }
@@ -25,24 +23,25 @@
 
   &:active,
   &:focus {
-    outline: none;
+    outline: $color-hover;
   }
 
   &--search {
-    width: 122px;
-    padding: 14px 36px 13px;
+    min-width: rem(122px);
+    padding: rem(14px) rem(36px) rem(13px);
   }
 
   &--shop {
-    padding: 14px 30px 13px 31px;
+    padding: rem(14px) rem(30px) rem(13px) rem(31px);
   }
 
   &--disabled {
+    padding: 0;
     background-color: $color-disable;
   }
 
   &--cart {
     background-color: $color-cart;
-    padding: 14px 9px 13px 8px;
+    padding: rem(14px) rem(9px) rem(13px) rem(8px);
   }
 }

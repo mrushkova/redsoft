@@ -1,5 +1,5 @@
 .section {
-  padding: 24px 0;
+  padding: rem(24px) 0;
 
   &__inner {
     display: flex;
@@ -8,7 +8,7 @@
   }
 
   &--header {
-    border-bottom: 1px solid #e1e1e1;
+    border-bottom: 1px solid $color-light;
   }
 
   &--main {
@@ -17,7 +17,7 @@
 
   &--footer {
     flex-shrink: 0;
-    background-color: #eceaea;
+    background-color: $color-background-footer;
     color: $color-grey-dark;
   }
 }

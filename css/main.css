@@ -21,35 +21,33 @@ body {
 .heading {
   font-family: 'Merriweather', sans-serif; }
   .heading--1 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
-    line-height: 36px;
-    margin-top: 45px;
-    margin-bottom: 39px; }
+    line-height: 2.25rem;
+    margin-top: 2.8125rem;
+    margin-bottom: 2.4375rem; }
   .heading--2 {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
-    line-height: 27px; }
+    line-height: 1.6875rem; }
   .heading--3 {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 24px;
-    margin-top: 12px; }
+    line-height: 1.5rem;
+    margin-top: 0.75rem; }
 
 .btn, .btn:link, .btn:visited {
   font-family: 'Merriweather', sans-serif;
   display: flex;
   justify-content: center;
   align-content: center;
-  width: 118px;
-  height: 48px;
+  min-width: 7.375rem;
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
   background-color: #403432;
   color: #f4f6f9;
-  line-height: 21px;
-  transition: all 0.2s;
+  line-height: 1.3125rem;
   border: none;
   cursor: pointer; }
 
@@ -57,29 +55,30 @@ body {
   background-color: #776763; }
 
 .btn:active, .btn:focus {
-  outline: none; }
+  outline: #776763; }
 
 .btn--search {
-  width: 122px;
-  padding: 14px 36px 13px; }
+  min-width: 7.625rem;
+  padding: 0.875rem 2.25rem 0.8125rem; }
 
 .btn--shop {
-  padding: 14px 30px 13px 31px; }
+  padding: 0.875rem 1.875rem 0.8125rem 1.9375rem; }
 
 .btn--disabled {
+  padding: 0;
   background-color: #c1b4b1; }
 
 .btn--cart {
   background-color: #5b3a32;
-  padding: 14px 9px 13px 8px; }
+  padding: 0.875rem 0.5625rem 0.8125rem 0.5rem; }
 
 .search {
   position: relative; }
   .search__input {
     font-family: 'Merriweather', sans-serif;
-    width: 416px;
-    height: 48px;
-    padding: 13px 16px;
+    min-width: 26rem;
+    height: 3rem;
+    padding: 0.8125rem 1rem;
     color: #9f9f9f;
     font-size: 14px;
     border: 1px solid #e1e1e1;
@@ -87,18 +86,18 @@ body {
     background-color: transparent; }
     .search__input:active, .search__input:focus {
       border-color: #b5b5b5;
-      outline: none;
+      outline: #b5b5b5;
       color: #343030; }
   .search__btn {
     position: absolute;
-    height: 48px;
+    height: 3rem;
     top: 0;
     right: 0; }
 
 .contacts {
   font-family: 'Merriweather', sans-serif;
   font-size: 14px;
-  line-height: 21px; }
+  line-height: 1.3125rem; }
   .contacts__tel, .contacts__address {
     text-decoration: none;
     color: #555; }
@@ -108,30 +107,30 @@ body {
       color: #5b3a32; }
   .contacts__tel {
     position: relative;
-    padding-left: 23px;
-    margin-right: 50px; }
+    padding-left: 1.4375rem;
+    margin-right: 3.125rem; }
     .contacts__tel::before {
       content: url(../../img/phone.svg);
       display: inline-block;
-      width: 14px;
-      height: 14px;
+      width: 0.875rem;
+      height: 0.875rem;
       position: absolute;
-      top: 3px;
+      top: 0.1875rem;
       left: 0; }
   .contacts__address {
     position: relative;
-    padding-left: 21px; }
+    padding-left: 1.3125rem; }
     .contacts__address::before {
       content: url(../../img/address.svg);
       display: inline-block;
-      width: 10px;
-      height: 14px;
+      width: 0.625rem;
+      height: 0.875rem;
       position: absolute;
-      top: 3px;
+      top: 0.1875rem;
       left: 0; }
 
 .section {
-  padding: 24px 0; }
+  padding: 1.5rem 0; }
   .section__inner {
     display: flex;
     align-items: center;
@@ -148,15 +147,15 @@ body {
 .nav {
   display: flex; }
   .nav__logo {
-    width: 48px;
-    height: 48px;
-    margin-right: 48px; }
+    width: 3rem;
+    height: 3rem;
+    margin-right: 3rem; }
   .nav__links {
     display: flex;
     align-items: center;
     list-style: none; }
   .nav__item {
-    margin-right: 48px; }
+    margin-right: 3rem; }
     .nav__item:last-child {
       margin-right: 0; }
   .nav__link {
@@ -175,16 +174,16 @@ body {
   .shop__item {
     display: flex;
     flex-direction: column;
-    max-width: 280px;
+    max-width: 17.5rem;
     border: 1px solid #e1e1e1; }
     .shop__item--sold {
       opacity: 50%; }
   .shop__info {
-    padding: 20px 24px 24px; }
+    padding: 1.25rem 1.5rem 1.5rem; }
   .shop__buy {
     display: flex;
     justify-content: space-between;
-    margin-top: 22px; }
+    margin-top: 1.375rem; }
   .shop__price-box {
     display: flex;
     flex-direction: column;
@@ -192,10 +191,10 @@ body {
   .shop__price--old {
     font-size: 14px;
     font-weight: 300;
-    line-height: 21px;
+    line-height: 1.3125rem;
     color: #a0a0a0;
     text-decoration: line-through; }
   .shop__price--new {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 24px; }
+    line-height: 1.5rem; }
